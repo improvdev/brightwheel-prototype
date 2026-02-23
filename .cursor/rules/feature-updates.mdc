@@ -1,0 +1,30 @@
+---
+description: Feature requirements markdown format
+globs: features/**/*.md
+alwaysApply: true
+---
+# LLM Rule for Updating Feature Requirements Markdown
+
+When adding or updating a feature, update the features/ md files. Follow these guidelines:
+
+1. **Main Feature Heading:** Each feature set under a top-level heading (e.g. `# Feature: [Feature Name]`).
+
+2. **Versioned Sections:** Use second-level headings (e.g. `## V1: Core`, `## V2: Enhancements`, `## VNext`).
+
+3. **GFM Task Lists:** Use `[x]` for completed, `[ ]` for todo. Example: `- [x] **User Login**: Implement sign-in.`
+
+4. **Descriptive Text:** Bold the title/keyword after the checkbox, then a concise description.
+
+5. **Sub-Tasks:** Indent under parent with GFM task lists.
+
+6. **Consistency:** Apply formatting consistently across all feature docs.
+
+**Example:**
+```markdown
+# Feature: User Account
+
+## V1: Basic Features
+
+- [x] **Login**: Users can sign in.
+- [ ] **Password Reset**: Users can request reset via email.
+```

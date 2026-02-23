@@ -1,0 +1,6 @@
+---
+description: Documentation location
+globs: 
+alwaysApply: true
+---
+When creating a guide, put it in the docs/guides folder.

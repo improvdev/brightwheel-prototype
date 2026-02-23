@@ -1,0 +1,41 @@
+---
+description: Script organization, Jira (optional), no hardcoded secrets
+globs: 
+alwaysApply: true
+---
+When creating a script that is not part of the main application:
+- scripts/analysis - For data analysis, reporting, insights
+- scripts/validations - For validators, data quality checks
+- scripts/test - Manual test scripts, integration testing
+- scripts/utilities - Processing scripts, integration tools, utilities
+Use your judgment when creating scripts. When creating a guide, put it in docs/guides.
+
+Scripts organization:
+- scripts/analysis/ - Data analysis, reporting, insights
+- scripts/validations/ - Data quality checks and correctness verification
+- scripts/test/ - Manual test scripts, integration testing, debugging
+- scripts/utilities/ - Processing scripts, integration tools, utilities
+- scripts/results/ - Output files and reports
+
+Test Organization:
+- tests/ - Proper unit tests (pytest/unittest) with assertions, mocking, CI/CD
+- scripts/test/ - Manual test scripts, integration testing, debugging tools
+
+Clean up one-time use scripts after completion.
+
+## Jira Ticket Management (optional - remove if not using Jira)
+
+**Use the unified Jira utility** (`scripts/jira/jira.js`) when creating/updating Jira tickets.
+- Required fields: summary, description, priority, labels, issueType
+- See `docs/rules/jira-ticket-management.md` if Jira is used
+
+## No Hardcoded Secrets Rule
+
+**NEVER commit secrets, API tokens, passwords, or credentials in code.**
+
+- Use environment variables for all secrets
+- Use `.env` files for local development (gitignored)
+- Create `.env.example` templates
+- Document required env vars in README
+
+See `docs/rules/no-hardcoded-secrets.md` for complete guidelines.

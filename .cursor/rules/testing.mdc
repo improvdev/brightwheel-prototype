@@ -1,0 +1,12 @@
+---
+description: Testing discipline
+globs: 
+alwaysApply: true
+---
+# Testing Discipline
+
+- **Never delete tests** without explicit product owner direction. When a test fails, fix it—don't remove or skip it.
+
+- **Fix tests within intended behavior.** Maintain the feature contract; don't alter functionality merely to satisfy a test.
+
+- **Escalate when blocked.** If you cannot make a test pass without altering functionality, surface the issue with context instead of muting or deleting the test.

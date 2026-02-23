@@ -1,0 +1,6 @@
+---
+description: Domain terminology
+globs: 
+alwaysApply: true
+---
+Use consistent domain-specific terminology in code and internal naming. Keep user-facing display text separate from internal naming. Use descriptive names that reflect the actual domain and future extensibility of the project.

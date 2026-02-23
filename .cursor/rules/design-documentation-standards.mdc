@@ -1,0 +1,18 @@
+---
+description: Design diagram standards
+globs: Design/**/*.mmd, Design/**/*.md
+alwaysApply: false
+---
+When changes affect design, update design documents in the Design/ folder. Use Mermaid syntax.
+
+Diagram types:
+- **Context** (`*_context.mmd`) - System context, external services
+- **Containers** (`*_container.mmd`) - High-level tech choices
+- **Components** (`*_component.mmd`) - Component breakdown
+- **Flows** (`*_flow.mmd`) - Sequence diagrams, user workflows
+- **Data** (`*_model.mmd`) - Entity relationships
+- **States** (`*_states.mmd`) - State diagrams
+
+Directory structure: Design/Context/, Design/Containers/, Design/Components/, Design/Flows/, Design/Data/, Design/States/
+
+See the full Design/ folder for examples. Update diagrams when architecture changes.
