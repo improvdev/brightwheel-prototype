@@ -48,17 +48,17 @@ guard let token = apiToken else {
 
 ```javascript
 // ❌ BAD - Never do this!
-const API_TOKEN = 'ATATT3xFfGF0qyTqcHLgVrDIRJ6Z0CRIDbJXOQP_5fMXUuL7H55s...';
+const API_TOKEN = 'xxx-your-secret-here-xxx';
 ```
 
 ```python
 # ❌ BAD - Never do this!
-api_token = "sk_live_51H3ll0W0rld..."
+api_token = "xxx-your-secret-here-xxx"
 ```
 
 ```swift
 // ❌ BAD - Never do this!
-let apiToken = "ATATT3xFfGF0qyTqcHLgVrDIRJ6Z0CRIDbJXOQP_5fMXUuL7H55s..."
+let apiToken = "xxx-your-secret-here-xxx"
 ```
 
 ## Best Practices

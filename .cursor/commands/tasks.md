@@ -2,7 +2,6 @@
 description: Generate dependency-ordered tasks.md from design artifacts.
 scripts:
   sh: scripts/bash/check-prerequisites.sh --json
-  ps: scripts/powershell/check-prerequisites.ps1 -Json
 ---
 
 Given the context provided as an argument, do this:

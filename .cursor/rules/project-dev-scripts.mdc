@@ -1,5 +1,5 @@
 ---
-description: Script organization, Jira (optional), no hardcoded secrets
+description: Script organization, guides location, no hardcoded secrets
 globs: 
 alwaysApply: true
 ---
@@ -22,12 +22,6 @@ Test Organization:
 - scripts/test/ - Manual test scripts, integration testing, debugging tools
 
 Clean up one-time use scripts after completion.
-
-## Jira Ticket Management (optional - remove if not using Jira)
-
-**Use the unified Jira utility** (`scripts/jira/jira.js`) when creating/updating Jira tickets.
-- Required fields: summary, description, priority, labels, issueType
-- See `docs/rules/jira-ticket-management.md` if Jira is used
 
 ## No Hardcoded Secrets Rule
 

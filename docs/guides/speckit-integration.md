@@ -41,8 +41,7 @@ project-root/
 │   ├── plan-template.md      # Implementation plan template
 │   └── tasks-template.md     # Task breakdown template
 └── scripts/
-    ├── bash/                 # Bash scripts for Speckit workflow
-    └── powershell/           # PowerShell scripts for Speckit workflow
+    └── bash/                 # Bash scripts for Speckit workflow
 ```
 
 ## Workflow

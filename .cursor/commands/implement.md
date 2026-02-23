@@ -2,7 +2,6 @@
 description: Execute implementation plan from tasks.md.
 scripts:
   sh: scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks
-  ps: scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks
 ---
 
 Given the current feature context, do this:

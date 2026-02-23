@@ -4,14 +4,14 @@ A reusable repository template with Cursor rules, Speckit workflow, and project 
 
 ## What's Included
 
-- **Cursor rules** (`.cursor/rules/`) – AI guidance for scripts, features, naming, testing, and more
+- **Cursor rules** (`.cursor/rules/`) – AI guidance for scripts, features, testing, design, and more
 - **Speckit workflow** (`.cursor/commands/`, `templates/`) – Specify → Plan → Tasks → Implement
 - **Constitution** (`memory/constitution.md`) – Project principles and governance
 - **Documentation structure** (`docs/guides/`, `docs/rules/`)
 - **Script organization** (`scripts/analysis|validations|test|utilities|results/`)
 - **Feature specs** (`features/`, `specs/`)
 - **Design docs** (`Design/`)
-- **GitHub** – PR template, workflows placeholder
+- **GitHub** – PR template
 
 ## Quick Start
 
@@ -36,17 +36,7 @@ git remote add origin <your-new-repo-url>
 3. **Edit `.cursor/rules/`** – Remove rules that don't apply (e.g., `frontend.mdc` if not multi-platform), or add project-specific ones
 4. **Add `.cursorignore`** – Exclude large folders, node_modules, etc.
 
-### 3. Optional: Jira integration
-
-If you use Jira:
-- Add `scripts/jira/jira.js` (copy from a project that has it)
-- Ensure `docs/rules/jira-ticket-management.md` is referenced
-
-If you don't use Jira:
-- Remove Jira sections from `project-dev-scripts.mdc` and `frontend.mdc`
-- Remove or simplify `docs/rules/jira-ticket-management.md`
-
-### 4. Speckit (Spec-Driven Development)
+### 3. Speckit (Spec-Driven Development)
 
 Install Speckit:
 ```bash
@@ -70,10 +60,10 @@ See `docs/guides/speckit-integration.md` for the full workflow.
 │   └── constitution.md  # Project principles
 ├── docs/
 │   ├── guides/          # How-to guides
-│   └── rules/          # Rule documentation (secrets, Jira, etc.)
+│   └── rules/          # Rule documentation (secrets, etc.)
 ├── features/           # Feature requirements
 ├── specs/              # Speckit specs (###-feature-name/)
-├── Design/             # C4 diagrams, flows (Mermaid)
+├── Design/             # Architecture diagrams (Mermaid)
 ├── scripts/
 │   ├── analysis/
 │   ├── validations/
@@ -82,8 +72,7 @@ See `docs/guides/speckit-integration.md` for the full workflow.
 │   └── results/
 ├── templates/          # Spec, plan, tasks templates
 ├── .github/
-│   ├── pull_request_template.md
-│   └── workflows/
+│   └── pull_request_template.md
 ├── CLAUDE.md           # AI context for Claude/Cursor
 └── README.md
 ```

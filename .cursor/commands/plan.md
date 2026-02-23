@@ -2,7 +2,6 @@
 description: Execute the implementation planning workflow using the plan template.
 scripts:
   sh: scripts/bash/setup-plan.sh --json
-  ps: scripts/powershell/setup-plan.ps1 -Json
 ---
 
 Given the implementation details provided as an argument, do this:
