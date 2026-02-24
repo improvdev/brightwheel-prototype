@@ -1,0 +1,44 @@
+# Build and deploy front-desk to Cloud Run.
+# Run from repo root: gcloud builds submit --config=cloudbuild.yaml
+# Or connect this repo to a Cloud Build trigger for automatic deploys.
+#
+# One-time: create Artifact Registry repo and secret:
+#   gcloud artifacts repositories create front-desk --repository-format=docker --location=${_REGION}
+#   gcloud secrets create openai-api-key --data-file=./front-desk/.env.local  # or add value in Console
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    id: build
+    dir: 'front-desk'
+    args:
+      - 'build'
+      - '-t'
+      - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/front-desk/front-desk:${SHORT_SHA}'
+      - '.'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: push
+    waitFor: ['build']
+    args:
+      - 'push'
+      - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/front-desk/front-desk:${SHORT_SHA}'
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: deploy
+    entrypoint: gcloud
+    waitFor: ['push']
+    args:
+      - 'run'
+      - 'deploy'
+      - 'front-desk'
+      - '--image=${_REGION}-docker.pkg.dev/${PROJECT_ID}/front-desk/front-desk:${SHORT_SHA}'
+      - '--region=${_REGION}'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+      - '--set-secrets=OPENAI_API_KEY=openai-api-key:latest'
+
+substitutions:
+  _REGION: us-central1
+
+options:
+  logging: CLOUD_LOGGING_ONLY

@@ -1,0 +1,35 @@
+# Dependencies and build
+node_modules
+.next
+npm-debug.log*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Env (never bake secrets into image)
+.env
+.env.*
+!.env.example
+
+# Git and IDE
+.git
+.gitignore
+.cursorignore
+.idea
+.vscode
+*.md
+!README.md
+
+# Local data (use volume or env in deploy)
+data/
+
+# Test and misc
+coverage
+.nyc_output
+*.test.*
+*.spec.*
+__tests__
+scripts/test
